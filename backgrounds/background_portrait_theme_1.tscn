@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4my88360q8mk"]
+
+[ext_resource type="Texture2D" uid="uid://d0lomnqfyrud7" path="res://assets/theme_1/images/backgrounds/default/Background.png" id="1_afjbx"]
+[ext_resource type="Texture2D" uid="uid://dru0bd7q387yu" path="res://assets/theme_1/images/backgrounds/default/ForegroundTree.png" id="2_1lwof"]
+
+[node name="BackgroundTheme1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_afjbx")
+
+[node name="ForegroundTree" type="TextureRect" parent="."]
+offset_left = 360.0
+offset_right = 1098.0
+offset_bottom = 2208.0
+texture = ExtResource("2_1lwof")

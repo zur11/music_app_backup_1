@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://boj0r71qmdfuq"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_v7qsu"]
+[ext_resource type="Script" path="res://global_systems/scene_manager_system/scene_container/scene_container.gd" id="2_j4hw2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_v7qsu")
+
+[node name="BackgroundContainer" type="Node2D" parent="."]
+script = ExtResource("2_j4hw2")
+
+[node name="ScreenContainer" type="Node2D" parent="."]
+script = ExtResource("2_j4hw2")

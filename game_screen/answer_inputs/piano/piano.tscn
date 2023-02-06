@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2thr16nxhlgj"]
+
+[ext_resource type="Script" path="res://game_screen/answer_inputs/piano/piano.gd" id="1_8f5f2"]
+[ext_resource type="PackedScene" uid="uid://cuhofqwsa5i3c" path="res://game_screen/answer_inputs/random_input_buttons/answer_button/answer_button.tscn" id="1_imjv2"]
+
+[node name="Piano" type="Node2D"]
+script = ExtResource("1_8f5f2")
+
+[node name="AnswerButton" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 57.0
+offset_top = 833.0
+offset_right = 237.0
+offset_bottom = 1023.0
+text = ""
+
+[node name="AnswerButton2" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 168.0
+offset_top = 608.0
+offset_right = 348.0
+offset_bottom = 798.0
+text = ""
+
+[node name="AnswerButton3" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 279.0
+offset_top = 837.0
+offset_right = 459.0
+offset_bottom = 1027.0
+text = ""
+
+[node name="AnswerButton4" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 397.0
+offset_top = 608.0
+offset_right = 577.0
+offset_bottom = 798.0
+text = ""
+
+[node name="AnswerButton5" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 511.0
+offset_top = 840.0
+offset_right = 691.0
+offset_bottom = 1030.0
+text = ""
+
+[node name="AnswerButton6" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 879.0
+offset_top = 840.0
+offset_right = 1059.0
+offset_bottom = 1030.0
+text = ""
+
+[node name="AnswerButton7" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 987.0
+offset_top = 602.0
+offset_right = 1167.0
+offset_bottom = 792.0
+text = ""
+
+[node name="AnswerButton8" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 1122.0
+offset_top = 840.0
+offset_right = 1302.0
+offset_bottom = 1030.0
+text = ""
+
+[node name="AnswerButton9" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 1234.0
+offset_top = 602.0
+offset_right = 1414.0
+offset_bottom = 792.0
+text = ""
+
+[node name="AnswerButton10" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 1355.0
+offset_top = 840.0
+offset_right = 1535.0
+offset_bottom = 1030.0
+text = ""
+
+[node name="AnswerButton11" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 1476.0
+offset_top = 607.0
+offset_right = 1656.0
+offset_bottom = 797.0
+text = ""
+
+[node name="AnswerButton12" parent="." instance=ExtResource("1_imjv2")]
+custom_minimum_size = Vector2(180, 0)
+offset_left = 1588.0
+offset_top = 840.0
+offset_right = 1768.0
+offset_bottom = 1030.0
+text = ""

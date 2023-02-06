@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnxn8xcr8ky7v"]
+
+[ext_resource type="Script" path="res://game_screen/answer_inputs/random_input_buttons/random_input_buttons.gd" id="1_s687o"]
+[ext_resource type="PackedScene" uid="uid://cuhofqwsa5i3c" path="res://game_screen/answer_inputs/random_input_buttons/answer_button/answer_button.tscn" id="2_njxr5"]
+
+[node name="RandomInputButtons" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_s687o")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 100
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AnswerButton" parent="MarginContainer/CenterContainer/HBoxContainer" instance=ExtResource("2_njxr5")]
+layout_mode = 2
+
+[node name="AnswerButton2" parent="MarginContainer/CenterContainer/HBoxContainer" instance=ExtResource("2_njxr5")]
+layout_mode = 2
+
+[node name="AnswerButton3" parent="MarginContainer/CenterContainer/HBoxContainer" instance=ExtResource("2_njxr5")]
+layout_mode = 2
+
+[node name="AnswerButton4" parent="MarginContainer/CenterContainer/HBoxContainer" instance=ExtResource("2_njxr5")]
+layout_mode = 2

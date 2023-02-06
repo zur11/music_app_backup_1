@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://csn2bkdbv06b4"]
+
+[ext_resource type="Texture2D" uid="uid://drlj853k5l5ig" path="res://assets/theme_1/images/game/piano/piano_key_white.png" id="1_p8pf5"]
+
+[resource]
+texture = ExtResource("1_p8pf5")
+region_rect = Rect2(0, 0, 177, 514)

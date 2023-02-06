@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5lj3050sx4s8"]
+
+[ext_resource type="PackedScene" uid="uid://d4my88360q8mk" path="res://backgrounds/background_portrait_theme_1.tscn" id="1_o34ty"]
+
+[node name="BackgroundTheme1" instance=ExtResource("1_o34ty")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Background" parent="." index="0"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+expand_mode = 1
+
+[node name="ForegroundTree" parent="." index="1"]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+expand_mode = 1

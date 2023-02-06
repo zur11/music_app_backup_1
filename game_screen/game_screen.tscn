@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://djneumxpp42np"]
+
+[ext_resource type="Theme" uid="uid://bxdc46numn0ub" path="res://assets/theme_1/themes/main_menu/main_menu.tres" id="1_7gp7w"]
+[ext_resource type="Script" path="res://game_screen/game_screen.gd" id="2_wdem4"]
+[ext_resource type="Script" path="res://global_systems/scene_manager_system/scene_container/scene_container.gd" id="3_nvy11"]
+[ext_resource type="PackedScene" path="res://game_screen/hud/hud.tscn" id="4_s5ba4"]
+
+[node name="GameScreen" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_7gp7w")
+script = ExtResource("2_wdem4")
+
+[node name="QuestionContainer" type="Node2D" parent="."]
+script = ExtResource("3_nvy11")
+
+[node name="AnswerContainer" type="Node2D" parent="."]
+script = ExtResource("3_nvy11")
+
+[node name="HUD" parent="." instance=ExtResource("4_s5ba4")]
+layout_mode = 1
+mouse_filter = 2
+
+[node name="GotoPianoButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1151.0
+offset_top = 62.0
+offset_right = 1546.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 50
+text = "Piano"
+
+[node name="GotoRandomButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 52.0
+offset_right = 1032.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 50
+text = "RndInputButton"
+
+[connection signal="pressed" from="GotoPianoButton" to="." method="_on_goto_piano_button_pressed"]
+[connection signal="pressed" from="GotoRandomButton" to="." method="_on_goto_random_button_pressed"]
