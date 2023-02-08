@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0tbpm67hlq4a"]
+[gd_scene load_steps=3 format=3 uid="uid://b2432ujd3566g"]
 
-[ext_resource type="Script" path="res://menus_screen/games_menu/games_menu.gd" id="1_kwb87"]
-[ext_resource type="PackedScene" uid="uid://53041woso52e" path="res://menus_screen/games_menu/go_to_game_button/go_to_game_button.tscn" id="2_eniyv"]
+[ext_resource type="Script" path="res://menus_screens/games_menu/games_menu.gd" id="1_kwb87"]
+[ext_resource type="PackedScene" uid="uid://cur4luxydt1p3" path="res://menus_screens/games_menu/go_to_game_button/go_to_game_button.tscn" id="2_eniyv"]
 
 [node name="GamesMenu" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)

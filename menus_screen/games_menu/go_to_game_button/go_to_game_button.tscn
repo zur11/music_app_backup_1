@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://53041woso52e"]
-
-[ext_resource type="Script" path="res://menus_screen/games_menu/go_to_game_button/go_to_game_button.gd" id="1_wdill"]
-
-[node name="GoToGameButton" type="Button"]
-theme_override_font_sizes/font_size = 75
-text = "Anglo Greek"
-script = ExtResource("1_wdill")

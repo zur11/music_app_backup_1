@@ -1,4 +1,4 @@
-class_name QuestionOutput extends Control
+class_name QuestionOutput extends Node2D
 
 var current_question : Note 
 

@@ -10,9 +10,9 @@ class Game:
 
 var correct_answer: Note
 
-var random_input_buttons = load("res://game_screen/answer_inputs/random_input_buttons/random_input_buttons.tscn")
-var piano = load("res://game_screen/answer_inputs/piano/piano.tscn")
-var question_output = load("res://game_screen/question_outputs/question_output.tscn")
+var random_input_buttons:PackedScene = load("res://game_screen/answers/random_input_buttons/random_input_buttons.tscn")
+var piano:PackedScene = load("res://game_screen/answers/piano/piano.tscn")
+var question_output:PackedScene = load("res://game_screen/questions/question_output.tscn")
 
 var current_game: Game = Game.new(question_output, random_input_buttons)
 
@@ -59,8 +59,8 @@ func _evaluate_answer(_recived_answer: Note) -> bool:
 func _set_new_question():
 	var correct_answer_relative_pitch = randi() % 12 
 	correct_answer = Note.new(correct_answer_relative_pitch)
-	question_node.set_new_question(correct_answer)
-	answer_node.set_new_question(correct_answer)
+	$QuestionContainer/Questions.set_new_question(correct_answer)
+	$AnswerContainer/Answers.set_new_question(correct_answer)
 
 func _on_goto_piano_button_pressed():
 	current_game = Game.new(question_output, piano)

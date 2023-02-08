@@ -1,4 +1,4 @@
-class_name AnswerInput extends Control
+class_name AnswerInput extends Node2D
 
 var _answer_options: Array[Note]
 
