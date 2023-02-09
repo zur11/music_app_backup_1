@@ -42,5 +42,15 @@ offset_bottom = 184.0
 theme_override_font_sizes/font_size = 50
 text = "RndInputButton"
 
+[node name="GoBackToMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 72.0
+offset_right = 340.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 55
+text = "GoBack"
+
 [connection signal="pressed" from="GotoPianoButton" to="." method="_on_goto_piano_button_pressed"]
 [connection signal="pressed" from="GotoRandomButton" to="." method="_on_goto_random_button_pressed"]
+[connection signal="pressed" from="GoBackToMenuButton" to="." method="_on_go_back_to_menu_button_pressed"]
