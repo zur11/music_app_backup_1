@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxsrc6ltpus87"]
+
+[ext_resource type="Script" path="res://menus_screens/config_menu/config_menu_theme_1.gd" id="1_bvsg6"]
+
+[node name="config_menu_theme1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bvsg6")
+
+[node name="ChangeToTheme1Buttton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 97.0
+offset_right = 1095.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 50
+text = "go to theme1"
+
+[node name="ChangeToTheme2Buttton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 337.0
+offset_right = 1113.0
+offset_bottom = 488.0
+theme_override_font_sizes/font_size = 50
+text = "go to theme2
+"
+
+[node name="GoBackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 841.0
+offset_right = 1106.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Go Back
+"
+
+[connection signal="pressed" from="ChangeToTheme1Buttton" to="." method="_on_change_to_theme_1_buttton_pressed"]
+[connection signal="pressed" from="ChangeToTheme2Buttton" to="." method="_on_change_to_theme_2_buttton_pressed"]
+[connection signal="pressed" from="GoBackButton" to="." method="_on_go_back_button_pressed"]

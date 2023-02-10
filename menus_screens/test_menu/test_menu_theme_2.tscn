@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://do87qud2wt2nb"]
+
+[ext_resource type="PackedScene" uid="uid://c1xkuds1q58nd" path="res://menus_screens/test_menu/test_menu_theme_1.tscn" id="1_osamv"]
+
+[node name="test_menu_theme_1" instance=ExtResource("1_osamv")]
+
+[node name="GotoConfigMenuButton" parent="." index="0"]
+offset_left = 221.0
+offset_top = 275.0
+offset_right = 809.0
+offset_bottom = 352.0
+
+[node name="GoBackMenu" parent="." index="1"]
+offset_left = 1012.0
+offset_top = 279.0
+offset_right = 1600.0
+offset_bottom = 356.0

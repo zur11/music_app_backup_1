@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw2dqo6qndtbw"]
+
+[ext_resource type="PackedScene" uid="uid://djneumxpp42np" path="res://game_screen/game_screen_theme_1.tscn" id="1_0cqug"]
+
+[node name="GameScreen" instance=ExtResource("1_0cqug")]

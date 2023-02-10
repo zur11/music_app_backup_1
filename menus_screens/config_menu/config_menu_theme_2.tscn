@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0oe5mnocnh1x"]
+
+[ext_resource type="PackedScene" uid="uid://cxsrc6ltpus87" path="res://menus_screens/config_menu/config_menu_theme_1.tscn" id="1_7u3es"]
+
+[node name="config_menu_theme2" instance=ExtResource("1_7u3es")]
+
+[node name="ChangeToTheme1Buttton" parent="." index="0"]
+offset_left = 164.0
+offset_top = 122.0
+offset_right = 712.0
+offset_bottom = 273.0
+
+[node name="ChangeToTheme2Buttton" parent="." index="1"]
+offset_left = 1019.0
+offset_top = 126.0
+offset_right = 1567.0
+offset_bottom = 277.0

@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1xkuds1q58nd"]
+
+[ext_resource type="Script" path="res://menus_screens/test_menu/test_menu.gd" id="1_h45q0"]
+
+[node name="test_menu_theme_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h45q0")
+
+[node name="GotoConfigMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 293.0
+offset_right = 1235.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 50
+text = "GotoConfigMenuButton"
+
+[node name="GoBackMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 658.0
+offset_top = 486.0
+offset_right = 1246.0
+offset_bottom = 563.0
+theme_override_font_sizes/font_size = 50
+text = "GoBack
+"
+
+[connection signal="pressed" from="GotoConfigMenuButton" to="." method="_on_goto_config_menu_button_pressed"]
+[connection signal="pressed" from="GoBackMenu" to="." method="_on_go_back_menu_pressed"]
