@@ -22,10 +22,10 @@ func set_game_scenes():
 	set_question_scene(current_game.question_scene)
 
 func set_answers_scene(loaded_answer_scene: Node):
-	SceneManagerSystem.get_container("AnswerContainer").goto_scene_without_history(loaded_answer_scene)
+	SceneManagerSystem.get_container("AnswerContainer").goto_scene(loaded_answer_scene)
 
 func set_question_scene(loaded_question_scene: Node):
-	SceneManagerSystem.get_container("QuestionContainer").goto_scene_without_history(loaded_question_scene)
+	SceneManagerSystem.get_container("QuestionContainer").goto_scene(loaded_question_scene)
 
 func _connect_answer_emiters():
 	for answer_emitter in get_tree().get_nodes_in_group("AnswerEmiters"):
