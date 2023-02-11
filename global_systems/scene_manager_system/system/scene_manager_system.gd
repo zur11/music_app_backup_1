@@ -1,6 +1,6 @@
 extends Node
 
-var _registered_containers = []
+var _registered_containers :Array = []
 
 var _err
 
@@ -31,3 +31,6 @@ func set_orientation(orientation):
 	elif orientation == DisplayServer.SCREEN_PORTRAIT:
 		get_viewport().content_scale_size = Vector2(1080, 1920)
 		if OS.is_debug_build(): DisplayServer.window_set_size(Vector2(360,640))
+
+func _unregister_container(container: SceneContainer):
+	_registered_containers.erase(container)

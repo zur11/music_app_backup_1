@@ -21,5 +21,12 @@ func _ready():
 	if !Engine.is_editor_hint():
 		_register_in_system()
 
+func _exit_tree():
+	if !Engine.is_editor_hint():
+		_unregister_in_system()
+
 func _register_in_system():
 	get_node("/root/"+autoload_name)._register_new_container(self)
+
+func _unregister_in_system():
+	get_node("/root/"+autoload_name)._unregister_container(self)
