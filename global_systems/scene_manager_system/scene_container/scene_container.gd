@@ -1,7 +1,9 @@
-@tool
-class_name SceneContainer extends SceneManager
+@tool class_name SceneContainer extends Node2D
 
 @export var autoload_name = "SceneManagerSystem"
+@export var is_historied: bool = false
+
+var scene_manager: SceneManager
 
 func _get_configuration_warnings():
 	var warning_messages :PackedStringArray = []
@@ -14,10 +16,10 @@ func _validate_container_name() -> String:
 		validation_result += "SceneContainer is the generic name for this Scene. If you instantiated more than once make sure they don't have the same name. It would cause a crash when instantiated at runtime.\n   Consider changing the name of the node of instantiated scene."
 	return validation_result
 
-func _init():
-	_container = self
-
 func _ready():
+	scene_manager = SceneManager.new(is_historied)
+	scene_manager._container = self
+	
 	if !Engine.is_editor_hint():
 		_register_in_system()
 

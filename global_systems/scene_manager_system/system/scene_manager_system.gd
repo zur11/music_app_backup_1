@@ -21,7 +21,7 @@ func get_container(container_name:String) -> SceneManager:
 		if container.name == container_name:
 			returned_container = container
 	assert(returned_container, 'There is no container with these name: '+ container_name)
-	return returned_container
+	return returned_container.scene_manager
 
 func set_orientation(orientation):
 	if !OS.is_debug_build(): DisplayServer.screen_set_orientation(orientation)
@@ -34,3 +34,7 @@ func set_orientation(orientation):
 
 func _unregister_container(container: SceneContainer):
 	_registered_containers.erase(container)
+
+func update_theme(new_theme: String) -> void:
+	for container in _registered_containers:
+		container.update_theme(new_theme)
