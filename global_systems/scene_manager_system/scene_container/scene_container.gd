@@ -8,12 +8,19 @@ var scene_manager: SceneManager
 func _get_configuration_warnings():
 	var warning_messages :PackedStringArray = []
 	if !_validate_container_name().is_empty(): warning_messages.append(_validate_container_name())
+	if !_validate_zero_children().is_empty(): warning_messages.append(_validate_zero_children())
 	return warning_messages
 	
 func _validate_container_name() -> String:
 	var validation_result := ""
 	if self.name == "SceneContainer":
 		validation_result += "SceneContainer is the generic name for this Scene. If you instantiated more than once make sure they don't have the same name. It would cause a crash when instantiated at runtime.\n   Consider changing the name of the node of instantiated scene."
+	return validation_result
+
+func _validate_zero_children() -> String:
+	var validation_result := ""
+	if self.get_child_count() > 0: 
+		validation_result = "SceneContainer should not have children, they will be deleted when calling goto_scene() function of self SceneManager. Calling this function is the correct way to put scene children on it."
 	return validation_result
 
 func _ready():
