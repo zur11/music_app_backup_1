@@ -11,3 +11,4 @@ script = ExtResource("2_j4hw2")
 
 [node name="ScreenContainer" type="Node2D" parent="."]
 script = ExtResource("2_j4hw2")
+is_historied = true

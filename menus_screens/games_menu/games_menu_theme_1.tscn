@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwrpxag7n74s2"]
+[gd_scene load_steps=9 format=3 uid="uid://bwrpxag7n74s2"]
 
 [ext_resource type="Script" path="res://menus_screens/games_menu/games_menu.gd" id="1_bwuaj"]
 [ext_resource type="PackedScene" uid="uid://cur4luxydt1p3" path="res://menus_screens/games_menu/go_to_game_button/go_to_game_button.tscn" id="2_qxh74"]
+[ext_resource type="PackedScene" uid="uid://kvhxicigx1ls" path="res://game_screen/answers/random_input_buttons/random_input_buttons.tscn" id="3_5bl3a"]
+[ext_resource type="Script" path="res://game_screen/game.gd" id="3_budd5"]
+[ext_resource type="PackedScene" uid="uid://c0n7grdcvfewq" path="res://game_screen/questions/question_output.tscn" id="4_y2722"]
+[ext_resource type="PackedScene" uid="uid://bcfumv0vs2fp5" path="res://game_screen/answers/piano/piano.tscn" id="6_0r5eu"]
+
+[sub_resource type="Resource" id="Resource_vwqvn"]
+script = ExtResource("3_budd5")
+question_packed_scene = ExtResource("4_y2722")
+answers_packed_scene = ExtResource("3_5bl3a")
+
+[sub_resource type="Resource" id="Resource_abus7"]
+script = ExtResource("3_budd5")
+question_packed_scene = ExtResource("4_y2722")
+answers_packed_scene = ExtResource("6_0r5eu")
 
 [node name="games_menu_theme_1" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -9,7 +23,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_bwuaj")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="GotoGameButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,24 +31,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GoToAngloGreekButton" parent="VBoxContainer" instance=ExtResource("2_qxh74")]
+[node name="GoToAngloGreekButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
 layout_mode = 2
 text = "GoToAngloGreek
 "
+game = SubResource("Resource_vwqvn")
 
-[node name="GoToAngloPianoButton" parent="VBoxContainer" instance=ExtResource("2_qxh74")]
+[node name="GoToAngloPianoButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
 layout_mode = 2
 text = "GoToAngloPiano
 "
+game = SubResource("Resource_abus7")
 
-[node name="GoToTestButton" parent="VBoxContainer" instance=ExtResource("2_qxh74")]
+[node name="GoToTestButton" type="Button" parent="."]
 layout_mode = 2
+offset_left = 1357.0
+offset_top = 874.0
+offset_right = 1773.0
+offset_bottom = 985.0
+theme_override_font_sizes/font_size = 75
 text = "TestMenu
 "
 
-[node name="GoToGameButton" parent="VBoxContainer" instance=ExtResource("2_qxh74")]
+[node name="GoBack" type="Button" parent="."]
 layout_mode = 2
+offset_left = 174.0
+offset_top = 869.0
+offset_right = 539.0
+offset_bottom = 980.0
+theme_override_font_sizes/font_size = 75
 text = "goBack"
 
-[connection signal="pressed" from="VBoxContainer/GoToTestButton" to="." method="_on_go_to_test_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/GoToGameButton" to="." method="_on_go_to_game_button_pressed"]
+[connection signal="pressed" from="GoToTestButton" to="." method="_on_go_to_test_button_pressed"]
+[connection signal="pressed" from="GoBack" to="." method="_on_go_back_pressed"]

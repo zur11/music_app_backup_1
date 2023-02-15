@@ -2,11 +2,15 @@ class_name GamesScreen extends Control
 
 var correct_answer: Note
 
-var random_input_buttons:Node = load("res://game_screen/answers/random_input_buttons/random_input_buttons.tscn").instantiate()
-var piano
-var question_output:Node = load("res://game_screen/questions/question_output.tscn").instantiate()
+var random_input_buttons:PackedScene = load("res://game_screen/answers/random_input_buttons/random_input_buttons.tscn")
+var piano: PackedScene = load("res://game_screen/answers/piano/piano.tscn")
+var question_output:PackedScene = load("res://game_screen/questions/question_output.tscn")
 
-var current_game: Game = Game.new(question_output, random_input_buttons)
+var current_game: Game
+
+#func _init():
+#	if !current_game: 
+#		current_game = Game.new(question_output, random_input_buttons)
 
 func _ready():
 	_set_game()
@@ -47,15 +51,15 @@ func _set_new_question():
 	$AnswerContainer/Answers.set_new_question(correct_answer)
 
 func _on_goto_piano_button_pressed():
-	piano = load("res://game_screen/answers/piano/piano.tscn").instantiate()
-	question_output = load("res://game_screen/questions/question_output.tscn").instantiate()
-	current_game = Game.new(question_output, piano)
+	current_game = Game.new()
+	current_game.question_packed_scene = question_output
+	current_game.answers_packed_scene = piano
 	_set_game()
 
 func _on_goto_random_button_pressed():
-	random_input_buttons = load("res://game_screen/answers/random_input_buttons/random_input_buttons.tscn").instantiate()
-	question_output = load("res://game_screen/questions/question_output.tscn").instantiate()
-	current_game = Game.new(question_output, random_input_buttons)
+	current_game = Game.new()
+	current_game.question_packed_scene = question_output
+	current_game.answers_packed_scene = random_input_buttons
 	_set_game()
 
 func _on_go_back_to_menu_button_pressed():
