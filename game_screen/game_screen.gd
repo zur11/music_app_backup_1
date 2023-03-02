@@ -6,30 +6,32 @@ var random_input_buttons:PackedScene = load("res://game_screen/answers/random_in
 var piano: PackedScene = load("res://game_screen/answers/piano/piano.tscn")
 var question_output:PackedScene = load("res://game_screen/questions/question_output.tscn")
 
-var current_game: Game
+var anglo_greek_game := Game.new()
+var anglo_piano_game := Game.new()
 
-#func _init():
-#	if !current_game: 
-#		current_game = Game.new(question_output, random_input_buttons)
+var games : Array[Game]= [anglo_greek_game, anglo_piano_game]
+
+var current_game: Game = Game.new()
 
 func _ready():
-	_set_game()
-
-func _set_game():
+	anglo_greek_game.answers_packed_scene = random_input_buttons
+	anglo_greek_game.question_packed_scene = question_output
+	anglo_piano_game.answers_packed_scene = piano
+	anglo_piano_game.question_packed_scene = question_output
 	set_game_scenes()
-	await get_tree().process_frame
-	_connect_answer_emiters()
-	_set_new_question()
 
 func set_game_scenes():
-	set_answers_scene(current_game.answers_scene)
-	set_question_scene(current_game.question_scene)
+	set_scenes()
+	await get_tree().process_frame
+	restart_game()
 
-func set_answers_scene(loaded_answer_scene: Node):
-	SceneManagerSystem.get_container("AnswerContainer").goto_scene(loaded_answer_scene)
+func set_scenes():
+	SceneManagerSystem.get_container("AnswerContainer").goto_scene(current_game.answers_packed_scene.instantiate())
+	SceneManagerSystem.get_container("QuestionContainer").goto_scene(current_game.question_packed_scene.instantiate())
 
-func set_question_scene(loaded_question_scene: Node):
-	SceneManagerSystem.get_container("QuestionContainer").goto_scene(loaded_question_scene)
+func restart_game():
+	_connect_answer_emiters()
+	_set_new_question()
 
 func _connect_answer_emiters():
 	for answer_emitter in get_tree().get_nodes_in_group("AnswerEmiters"):
@@ -50,17 +52,11 @@ func _set_new_question():
 	$QuestionContainer/Questions.set_new_question(correct_answer)
 	$AnswerContainer/Answers.set_new_question(correct_answer)
 
-func _on_goto_piano_button_pressed():
-	current_game = Game.new()
-	current_game.question_packed_scene = question_output
-	current_game.answers_packed_scene = piano
-	_set_game()
-
-func _on_goto_random_button_pressed():
-	current_game = Game.new()
-	current_game.question_packed_scene = question_output
-	current_game.answers_packed_scene = random_input_buttons
-	_set_game()
+func _on_select_game_button_pressed():
+	current_game = games[randi() % games.size()]
+	set_game_scenes()
 
 func _on_go_back_to_menu_button_pressed():
 	SceneManagerSystem.get_container("ScreenContainer").goto_previous_scene()
+
+

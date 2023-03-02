@@ -1,14 +1,12 @@
 extends Control
 
 func _ready():
-	for goto_game_button in $GotoGameButtons.get_children():
+	for goto_game_button in get_node("%GotoGameButtons").get_children():
 		goto_game_button.pressed.connect(_goto_game.bind(goto_game_button))
 
 func _goto_game(goto_game_button: GotoGameButton):
 	var game_screen = load("res://game_screen/game_screen_theme_1.tscn").instantiate()
-	var current_game: Game = goto_game_button.game
-
-	game_screen.current_game = current_game
+	game_screen.current_game = goto_game_button.game
 
 	SceneManagerSystem.get_container("ScreenContainer").goto_scene(game_screen)
 

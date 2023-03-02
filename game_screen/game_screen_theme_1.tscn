@@ -24,23 +24,14 @@ script = ExtResource("3_ds0wg")
 layout_mode = 1
 mouse_filter = 2
 
-[node name="GotoPianoButton" type="Button" parent="."]
+[node name="SelectGameButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1151.0
-offset_top = 62.0
-offset_right = 1546.0
-offset_bottom = 174.0
+offset_left = 1022.0
+offset_top = 51.0
+offset_right = 1527.0
+offset_bottom = 163.0
 theme_override_font_sizes/font_size = 50
-text = "Piano"
-
-[node name="GotoRandomButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 473.0
-offset_top = 52.0
-offset_right = 1032.0
-offset_bottom = 184.0
-theme_override_font_sizes/font_size = 50
-text = "RndInputButton"
+text = "Select random game"
 
 [node name="GoBackToMenuButton" type="Button" parent="."]
 layout_mode = 0
@@ -51,6 +42,5 @@ offset_bottom = 177.0
 theme_override_font_sizes/font_size = 55
 text = "GoBack"
 
-[connection signal="pressed" from="GotoPianoButton" to="." method="_on_goto_piano_button_pressed"]
-[connection signal="pressed" from="GotoRandomButton" to="." method="_on_goto_random_button_pressed"]
+[connection signal="pressed" from="SelectGameButton" to="." method="_on_select_game_button_pressed"]
 [connection signal="pressed" from="GoBackToMenuButton" to="." method="_on_go_back_to_menu_button_pressed"]
