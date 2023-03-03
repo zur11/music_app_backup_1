@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Game" load_steps=4 format=3 uid="uid://bmwyqbkd0c1td"]
+
+[ext_resource type="PackedScene" path="res://games/answers/piano/piano.tscn" id="1_62qvl"]
+[ext_resource type="PackedScene" path="res://games/questions/greek_label/greek_label.tscn" id="2_u6sip"]
+[ext_resource type="Script" path="res://games/games_tres/game.gd" id="3_5mk5c"]
+
+[resource]
+script = ExtResource("3_5mk5c")
+question_packed_scene = ExtResource("2_u6sip")
+answers_packed_scene = ExtResource("1_62qvl")

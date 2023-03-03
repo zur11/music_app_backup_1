@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2vbwj34nrp77"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="FontFile" uid="uid://cs2rrd4s1vfub" path="res://assets/theme_1/fonts/Tigerious-ywyKe.otf" id="1_eiw0n"]
-[ext_resource type="Script" path="res://game_screen/answers/random_input_buttons/answer_button/answer_button.gd" id="2_ibxew"]
+[ext_resource type="Script" path="res://games/answers/random_input_buttons/answer_button/answer_button.gd" id="2_ibxew"]
 
 [node name="AnswerButton" type="Button"]
 custom_minimum_size = Vector2(224, 0)

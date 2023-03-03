@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvev0yohn4mth"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://game_screen/questions/greek_up_fifth_label/greek_fifth_label.gd" id="1_7i3k7"]
+[ext_resource type="Script" path="res://games/questions/greek_up_fifth_label/greek_fifth_label.gd" id="1_7i3k7"]
 
 [node name="Questions" type="Label"]
 offset_left = 839.0

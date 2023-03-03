@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Game" load_steps=4 format=3 uid="uid://c76a2mengjleo"]
+
+[ext_resource type="PackedScene" path="res://games/answers/random_input_buttons/anglo_random_input_buttons/anglo_random_input_buttons.tscn" id="1_fuxdo"]
+[ext_resource type="PackedScene" path="res://games/questions/greek_up_fifth_label/greek_fifth_label.tscn" id="2_fif0k"]
+[ext_resource type="Script" path="res://games/games_tres/game.gd" id="3_xscx0"]
+
+[resource]
+script = ExtResource("3_xscx0")
+question_packed_scene = ExtResource("2_fif0k")
+answers_packed_scene = ExtResource("1_fuxdo")

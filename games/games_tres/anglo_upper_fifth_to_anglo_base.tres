@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Game" load_steps=4 format=3 uid="uid://cosxruj8xdbik"]
+
+[ext_resource type="PackedScene" path="res://games/answers/random_input_buttons/anglo_random_input_buttons/anglo_random_input_buttons.tscn" id="1_e7bys"]
+[ext_resource type="PackedScene" path="res://games/questions/anglo_up_fifth_label/anglo_fifth_label.tscn" id="2_eepma"]
+[ext_resource type="Script" path="res://games/games_tres/game.gd" id="3_283ki"]
+
+[resource]
+script = ExtResource("3_283ki")
+question_packed_scene = ExtResource("2_eepma")
+answers_packed_scene = ExtResource("1_e7bys")
