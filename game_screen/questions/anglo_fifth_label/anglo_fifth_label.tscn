@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5w6hndkt8cir"]
+
+[ext_resource type="Script" path="res://game_screen/questions/anglo_fifth_label/anglo_fifth_label.gd" id="1_2uw80"]
+
+[node name="Questions" type="Label"]
+offset_left = 839.0
+offset_top = 212.0
+offset_right = 1007.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 105
+text = "Do"
+script = ExtResource("1_2uw80")

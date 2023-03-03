@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwrpxag7n74s2"]
+[gd_scene load_steps=13 format=3 uid="uid://b74kksg0ftve6"]
 
 [ext_resource type="Script" path="res://menus_screens/games_menu/games_menu.gd" id="1_bwuaj"]
 [ext_resource type="PackedScene" uid="uid://cur4luxydt1p3" path="res://menus_screens/games_menu/go_to_game_button/go_to_game_button.tscn" id="2_qxh74"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://game_screen/game.gd" id="3_budd5"]
 [ext_resource type="PackedScene" uid="uid://c0n7grdcvfewq" path="res://game_screen/questions/question_output.tscn" id="4_y2722"]
 [ext_resource type="PackedScene" uid="uid://bcfumv0vs2fp5" path="res://game_screen/answers/piano/piano.tscn" id="6_0r5eu"]
+[ext_resource type="PackedScene" uid="uid://bhvc6re7qblfu" path="res://game_screen/questions/greek_fifth_label/greek_fifth_label.tscn" id="7_2w12o"]
+[ext_resource type="PackedScene" uid="uid://b5w6hndkt8cir" path="res://game_screen/questions/anglo_fifth_label/anglo_fifth_label.tscn" id="7_tpwjf"]
 
 [sub_resource type="Resource" id="Resource_vwqvn"]
 script = ExtResource("3_budd5")
@@ -16,6 +18,16 @@ answers_packed_scene = ExtResource("3_5bl3a")
 script = ExtResource("3_budd5")
 question_packed_scene = ExtResource("4_y2722")
 answers_packed_scene = ExtResource("6_0r5eu")
+
+[sub_resource type="Resource" id="Resource_e6u1q"]
+script = ExtResource("3_budd5")
+question_packed_scene = ExtResource("7_2w12o")
+answers_packed_scene = ExtResource("3_5bl3a")
+
+[sub_resource type="Resource" id="Resource_2jqqi"]
+script = ExtResource("3_budd5")
+question_packed_scene = ExtResource("7_tpwjf")
+answers_packed_scene = ExtResource("3_5bl3a")
 
 [node name="games_menu_theme_1" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -43,6 +55,15 @@ layout_mode = 2
 text = "GoToAngloPiano
 "
 game = SubResource("Resource_abus7")
+
+[node name="GoToGreekFifthButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
+layout_mode = 2
+text = "Greek Fifth"
+game = SubResource("Resource_e6u1q")
+
+[node name="GoToAngloFifthButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
+layout_mode = 2
+game = SubResource("Resource_2jqqi")
 
 [node name="GoToTestButton" type="Button" parent="."]
 layout_mode = 2
