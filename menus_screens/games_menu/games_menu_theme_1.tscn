@@ -77,16 +77,6 @@ game = SubResource("Resource_e6u1q")
 layout_mode = 2
 game = SubResource("Resource_2jqqi")
 
-[node name="GoToTestButton" type="Button" parent="."]
-layout_mode = 2
-offset_left = 1357.0
-offset_top = 874.0
-offset_right = 1773.0
-offset_bottom = 985.0
-theme_override_font_sizes/font_size = 75
-text = "TestMenu
-"
-
 [node name="GoBack" type="Button" parent="."]
 layout_mode = 2
 offset_left = 174.0
@@ -96,5 +86,4 @@ offset_bottom = 980.0
 theme_override_font_sizes/font_size = 75
 text = "goBack"
 
-[connection signal="pressed" from="GoToTestButton" to="." method="_on_go_to_test_button_pressed"]
 [connection signal="pressed" from="GoBack" to="." method="_on_go_back_pressed"]

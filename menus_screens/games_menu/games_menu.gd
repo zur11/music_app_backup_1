@@ -10,9 +10,5 @@ func _goto_game(goto_game_button: GotoGameButton):
 
 	SceneManagerSystem.get_container("ScreenContainer").goto_scene(game_screen)
 
-func _on_go_to_test_button_pressed():
-	var test_menu = load("res://menus_screens/test_menu/test_menu_theme_1.tscn").instantiate()
-	SceneManagerSystem.get_container("ScreenContainer").goto_scene(test_menu)
-
 func _on_go_back_pressed():
 	SceneManagerSystem.get_container("ScreenContainer").goto_previous_scene()
