@@ -1,4 +1,4 @@
-class_name AnswerInput extends Node2D
+class_name GreekRndInpButtons extends Node2D
 
 var _answer_options: Array[Note]
 
@@ -24,6 +24,6 @@ func generate_answer_options(correct_answer_arg: Note) -> Array[Note]:
 func _set_up_buttons():
 	for ii in _answer_buttons.size():
 		_answer_buttons[ii].answer_value = _answer_options[ii]
-		_answer_buttons[ii].text = _answer_buttons[ii].answer_value.get_writen_name()
+		_answer_buttons[ii].text = _answer_buttons[ii].answer_value.get_writen_name(Note.naming_systems.GREEK)
 
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://kvhxicigx1ls"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://game_screen/answers/random_input_buttons/random_input_buttons.gd" id="1_v8ohy"]
+[ext_resource type="Script" path="res://game_screen/answers/random_input_buttons/anglo_random_input_buttons/anglo_random_input_buttons.gd" id="1_v8ohy"]
 [ext_resource type="PackedScene" uid="uid://d2vbwj34nrp77" path="res://game_screen/answers/random_input_buttons/answer_button/answer_button.tscn" id="2_dnvmj"]
 
 [node name="Answers" type="Node2D"]

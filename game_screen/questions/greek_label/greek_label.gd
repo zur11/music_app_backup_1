@@ -1,4 +1,4 @@
-class_name QuestionOutput extends Node2D
+class_name GreekLabel extends Node2D
 
 var current_question : Note 
 
