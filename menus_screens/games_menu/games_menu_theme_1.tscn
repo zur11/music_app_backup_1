@@ -1,12 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwp6abumyqwws"]
+[gd_scene load_steps=3 format=3 uid="uid://cwp6abumyqwws"]
 
 [ext_resource type="Script" path="res://menus_screens/games_menu/games_menu.gd" id="1_bwuaj"]
-[ext_resource type="PackedScene" uid="uid://cur4luxydt1p3" path="res://menus_screens/games_menu/go_to_game_button/go_to_game_button.tscn" id="2_qxh74"]
-[ext_resource type="Resource" uid="uid://2goex2b6fa5l" path="res://games/games_tres/greek_to_anglo.tres" id="3_pkher"]
-[ext_resource type="Resource" uid="uid://1q0rg4j0gecc" path="res://games/games_tres/anglo_to_greek.tres" id="4_q6ben"]
-[ext_resource type="Resource" uid="uid://bmwyqbkd0c1td" path="res://games/games_tres/anglo_to_piano.tres" id="5_3xm5a"]
-[ext_resource type="Resource" uid="uid://c76a2mengjleo" path="res://games/games_tres/greek_upper_fifth_to_greek_base.tres" id="6_feqsl"]
-[ext_resource type="Resource" uid="uid://cosxruj8xdbik" path="res://games/games_tres/anglo_upper_fifth_to_anglo_base.tres" id="7_jibyq"]
+[ext_resource type="Theme" uid="uid://cmwnvwqcqjlod" path="res://assets/theme_1/themes/games_menu/go_to_game_buttons.tres" id="2_mtvc8"]
 
 [node name="games_menu_theme_1" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -22,32 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="GoToGreekToAngloButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
-layout_mode = 2
-text = "Greek to Anglo
-"
-game = ExtResource("3_pkher")
-
-[node name="GoToAngloToGreekButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
-layout_mode = 2
-text = "Anglo to Greek"
-game = ExtResource("4_q6ben")
-
-[node name="GoToAngloPianoButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
-layout_mode = 2
-text = "GoToAngloPiano
-"
-game = ExtResource("5_3xm5a")
-
-[node name="GoToGreekFifthButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
-layout_mode = 2
-text = "Greek Fifth"
-game = ExtResource("6_feqsl")
-
-[node name="GoToAngloFifthButton" parent="GotoGameButtons" instance=ExtResource("2_qxh74")]
-layout_mode = 2
-game = ExtResource("7_jibyq")
+theme = ExtResource("2_mtvc8")
 
 [node name="GoBack" type="Button" parent="."]
 layout_mode = 2

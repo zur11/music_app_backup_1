@@ -6,5 +6,6 @@
 
 [resource]
 script = ExtResource("3_urnra")
+game_name = "greek_to_anglo"
 question_packed_scene = ExtResource("2_vgmjv")
 answers_packed_scene = ExtResource("1_1hjwq")

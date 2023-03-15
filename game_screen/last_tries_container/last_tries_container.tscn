@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb7sqgogid3xx"]
+
+[ext_resource type="Script" path="res://game_screen/last_tries_container/last_tries_container.gd" id="1_eh5g5"]
+
+[node name="LastTriesContainer" type="MarginContainer"]
+script = ExtResource("1_eh5g5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = -10

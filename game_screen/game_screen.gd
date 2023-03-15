@@ -11,6 +11,7 @@ var current_game: Game = Game.new()
 
 func _ready():
 	set_game_scenes()
+	_connect_achievements_signal()
 
 func set_game_scenes():
 	set_scenes()
@@ -41,8 +42,16 @@ func _evaluate_answer(_recived_answer: Note) -> bool:
 func _set_new_question():
 	var correct_answer_relative_pitch = randi() % 12 
 	correct_answer = Note.new(correct_answer_relative_pitch)
+
 	$QuestionContainer/Questions.set_new_question(correct_answer)
 	$AnswerContainer/Answers.set_new_question(correct_answer)
+
+func _connect_achievements_signal():
+	$"%LastTriesContainer".connect("achievement_acquired", _manage_achievements_signal)
+	
+func _manage_achievements_signal(new_achievement:GameAchievements):
+	current_game.game_achievements = new_achievement
+	printt(current_game.game_name, current_game.game_achievements.acquaired_achievement_degree)
 
 func _on_go_back_to_menu_button_pressed():
 	SceneManagerSystem.get_container("ScreenContainer").goto_previous_scene()

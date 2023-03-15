@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://7q0an868lxwl"]
 
 [ext_resource type="Theme" uid="uid://bvm3ufwanyw64" path="res://assets/theme_1/themes/game/hud/hud.tres" id="1_yemjd"]
 [ext_resource type="Script" path="res://game_screen/hud/hud.gd" id="2_f4mb5"]
